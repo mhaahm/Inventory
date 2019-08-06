@@ -1,0 +1,26 @@
+{% extends "layout/base.html.twig" %}
+{% set page = 'current_inventory' %}
+{% block title %}
+    Liste des produits
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid mt-5 ml-2">
+        <div class="row">
+            <div class="col-md-9 order-md-1 border border-secondary p-4 mr-4">
+                <div class="d-flex flex-lg-row justify-content-between" id="productsList">
+
+                </div>
+            </div>
+            <div class="col-md-2 order-md-2 mb-4 border border-secondary">
+                    {% for family in familys %}
+                        <div class="card border border-secondary mr-5 col-md-10 mb-3 mt-1 btn-success">
+                            <div class="card-body js-family" data-family="{{ family.familyName }}">
+                                {{ family.familyName }}
+                            </div>
+                        </div>
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

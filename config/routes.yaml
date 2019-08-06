@@ -1,0 +1,11 @@
+home:
+    path: /
+    controller: App\Controller\HomeController::home
+
+current_inventory:
+    path: /ListInventory
+    controller: App\Controller\HomeController::getInventory
+
+list_products:
+    path: /listProducts
+    controller: App\Controller\HomeController::listProducts
